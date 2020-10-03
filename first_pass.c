@@ -16,12 +16,12 @@ void firstFileRead(char* filename, Data* data)
         data->line_counter++;
         i = 0;
         char* wordArray[MAX_WORDS_PER_LINE];
-        char* ptr = strtok(buffer," \t\n,");
+        char* ptr = strtok(buffer," \r\t\n,");
         while(ptr != NULL)
         {
             wordArray[i] = (char*)malloc(strlen(ptr)+1);
             strcpy(wordArray[i],ptr);
-            ptr = strtok(NULL," \t\n,");
+            ptr = strtok(NULL," \r\t\n,");
             i += 1;
         }
         if(i == 0 || !strcmp(wordArray[0],";")) /*The line is empty or a comment - do nothing*/

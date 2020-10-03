@@ -16,12 +16,12 @@ void secondFileRead(char* filename, Data* data)
         i = 0;
         data->line_counter++;
         char* wordArray[MAX_WORDS_PER_LINE];
-        char* ptr = strtok(buffer," \t\n");
+        char* ptr = strtok(buffer," \r\t\n");
         while(ptr != NULL)
         {
             wordArray[i] = (char*)malloc(strlen(ptr)+1);
             strcpy(wordArray[i],ptr);
-            ptr = strtok(NULL," \t\n");
+            ptr = strtok(NULL," \r\t\n");
             i += 1;
         }
         if(i == 0 || !strcmp(wordArray[0],";")) /*The line is empty or a comment - do nothing*/
@@ -301,7 +301,7 @@ void pushNumbers(char* words[],unsigned int firstIndex, unsigned int numOfWords,
     char* ptr;
     for(i=firstIndex;i<numOfWords;i++)
     {
-        ptr = strtok(words[i],",");
+        ptr = strtok(words[i],",\r");
         while(ptr != NULL)
         {
             if(is_valid_int(ptr))
@@ -310,7 +310,7 @@ void pushNumbers(char* words[],unsigned int firstIndex, unsigned int numOfWords,
                 data->dataArr[data->DC].myType = DATA_WORD;
                 data->dataArr[data->DC].Value.value = atoi(ptr);
                 data->DC++;
-                ptr = strtok(NULL,",");
+                ptr = strtok(NULL,",\r");
             }
             else
             {
