@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1597865642 source:c:\workspace\c\mmn14\data_checker.c
+	"definitions.h"
+
+1597040133 c:\workspace\c\mmn14\definitions.h
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1597857578 source:c:\workspace\c\mmn14\first_pass.c
+	"definitions.h"
+
+1597858140 source:c:\workspace\c\mmn14\main.c
+	"definitions.h"
+
+1597041639 source:c:\workspace\c\mmn14\validation.c
+	"definitions.h"
+
+1597857584 source:c:\workspace\c\mmn14\second_pass.c
+	"definitions.h"
+
+1597223092 source:c:\workspace\c\mmn14\file_creator.c
+	"definitions.h"
+
