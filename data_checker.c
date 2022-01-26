@@ -289,8 +289,8 @@ void checkTwoOperands(char* words[], int* commandIndex, int* numOfWords, Data* d
     int n = strlen(words[*commandIndex+1]);
     if(*numOfWords-*commandIndex == 2)
     {
-        op1 = strtok(words[*commandIndex+1],",");
-        op2 = strtok(NULL,",");
+        op1 = strtok(words[*commandIndex+1],",\r");
+        op2 = strtok(NULL,",\r");
         if(op1 == NULL)
         {
             printf("Error: Source operand does not exist at line: %d\n", data->line_counter);

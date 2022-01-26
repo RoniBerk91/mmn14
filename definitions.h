@@ -98,7 +98,7 @@ typedef struct{
     Instruction* dataArr;
 }Data;
 
-/*-----Function declerations----- */
+/*-----Function declarations----- */
 /* main.c */
 void initGobalData(Data* data);
 void freeAllData(Data* data);
